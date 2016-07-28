@@ -45,7 +45,10 @@ module.exports = {
 	],
 	devServer:{
 		historyApiFallback: true,
-		//hot: true,		//这个好像是插件热插拔 还不太懂 不过默认还得插件才可以,要不报错. 好像是解析其他文件比如jxf 经过编译后输出 ,如果没有hot只有loader也不行
+		//这个好像是插件热插拔 还不太懂 . 好像是解析其他文件比如jxf 经过编译后输出 ,如果没有hot只有loader也不行.
+		//前面好像理解的还是不对,这个是组件修改时浏览器同步.比如vuejs这种组件,修改会同步到浏览器. 以后测试确定下
+		//修改好了 hot模式 报错问题.这个必须有webpace,我刚开始只装了webpace-dev-server
+		hot: true,		
 		inline: true,	//这个自动刷新
 		progress: true,
 	}
